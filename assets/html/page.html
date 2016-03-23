@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{{$config := .Config }}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{$config.Title}}</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/page.css">
+    <script type="text/javascript">
+    </script>
+    <script type="text/javascript" src="assets/javascript/devdept/base.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/array.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/date.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/dom.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/events.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/net.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/object.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/strings.js"></script>
+    <script type="text/javascript" src="assets/javascript/devdept/url.js"></script>
+    <script type="text/javascript" src="assets/javascript/page.js"></script>
+  </head>
+  <body>
+<h3 class="header">
+{{$config.Title}}
+</h3>
+<div id="content">
+<table colspan="0" rowspan="0">
+<thead>
+<tr>
+  <td>Index</td>
+  <td>Name</td>
+  <td>Title</td>
+  <td>Image</td>
+  <td>Emulator</td>
+  <td>Last</td>
+  <td>Count</td>
+  <td>Enabled</td>
+  <td></td>
+</tr>  
+</thead>
+<tbody>
+  {{range .Games}}
+
+<tr>
+  <td>{{ .Index }}</td>
+  <td>{{ .Name }}</td>
+  <td>{{ .Title }}</td>
+  <td>{{ .Image }}</td>
+  <td>{{ .Type }}</td>
+  <td>{{ .Last }}</td>
+  <td>{{ .Count }}</td>
+  <td><img src="assets/images/enable.png" onclick="ToggleEnable(this,'{{.Name}}');" width="20" {{if eq .Enabled false}} class="disabled"{{end}}></td>
+  <td><img onclick="exe('{{ .Name }}');" src="assets/images/exec.png" width="20"></td>
+</tr>{{end}}
+  
+  
+</tbody>
+</table>
+</div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+Title               = "ARCX Application"
+Fullscreen          = false
+WindowSize          = "800,600"
+Database            = "database.db"
+Columns             = 3
+Margin              = 40
+Query               = "SELECT * FROM items WHERE enabled=1 ORDER BY count DESC LIMIT 100"
+AnimationSpeed      = 6
+HttpPort            = 8080
+Src                 = "assets/images/img_map.png"
+FanartFallback      = "339,5,337,213"
+GameTitleAjustment  = "15,10"
+GameTitle           = "32,32,32,255"
+GameTitleBackground = "212,212,212,212"
+Background          = "32,32,32,255"
+Error               = "192,192,192,255"
+
+Left                = ["Axis0-", "Left"]
+Right               = ["Axis0+", "Right"]
+Up                  = ["Axis1-", "Up"]
+Down                = ["Axis1+", "Down"]
+Select              = ["Button2", "Space"]
+Reload              = ["R"]
+Exit                = ["Escape","Q"]
+
+[[Emulators]]
+  Name            = "mame"
+  Command         = "/Users/larsre/mame/mame64"
+  Attributes      = ["-rompath","/Users/larsre/mame/roms"]
+  RomPath         = "/Users/larsre/mame/roms"
+  RomExtension    = ".zip"
+  SkipExtension   = true
+  ScreenshotPath  = "/Users/larsre/mame/samples"
+
