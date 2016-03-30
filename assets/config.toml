@@ -25,10 +25,10 @@ Exit                = ["Escape","Q"]
 
 [[Emulators]]
   Name            = "mame"
-  Command         = "/Users/larsre/mame/mame64"
-  Attributes      = ["-rompath","/Users/larsre/mame/roms"]
-  RomPath         = "/Users/larsre/mame/roms"
+  Command         = "path/to/mame/executable"
+  Attributes      = []
+  RomPath         = "/path/to/mame/roms"
   RomExtension    = ".zip"
   SkipExtension   = true
-  ScreenshotPath  = "/Users/larsre/mame/samples"
+  ScreenshotPath  = "/path/to/screenshots"
 
